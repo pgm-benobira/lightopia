@@ -1,5 +1,6 @@
 :root {
     --blue: hsl(220, 93%, 11%);
+    --lightblue: hsl(218, 44%, 16%);
     --green: hsl(149, 76%, 46%);
     --black-bg: hsla(0, 0%, 0%, 0.4);
 }
@@ -22,11 +23,11 @@
     font-display: swap;
 }
 
+/* ------------------------------ GENERAL ---------------------------------- */
 body {
     background-color: var(--blue);
     color: white;
     font-family: 'Raleway';
-    padding: 0 6rem;
     overflow-x: hidden;
 }
 
@@ -39,49 +40,208 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--green);
+}
+
+.cta {
+    font-family: 'ITC Avant Garde Gothic Std';
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0;
+    margin-top: 2rem;
+    background: var(--green);
+    padding: 1.1rem 2.6rem;
+    padding-top: 1.3rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.cta:hover {
+    transition: 0.4s ease;
+    transform: scale(1.08);
+    color: var(--blue);
+}
+
+h1 {
+    font-family: 'ITC Avant Garde Gothic Std';
+    font-size: 2.6rem;
+    line-height: 108%;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.border {
+    width: 100%;
+    max-width: 10rem;
+    height: 0.14rem;
+    background: var(--green);
+    margin: 2rem auto;
+}
+
 /* ---------------------------- HEADER-VIDEO -------------------------------- */
+.video-container {
+    margin-bottom: 81rem;
+}
+
 video {
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     max-width: none;
 }
 
 /* ------------------------------- HEADER ----------------------------------- */
+.main-header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100vw;
+    max-width: 100%;
+    background-color: var(--blue);
+    padding: 0 4rem;
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem 0;
+    padding: 3.2rem 0;
 }
 
 .logo {
     width: 100%;
-    max-width: 14rem;
+    max-width: 13rem;
+}
+
+.logo:hover {
+    transition: 0.6s ease;
+    transform: scale(1.04);
 }
 
 .main-navigation ul {
     display: flex;
+    gap: 3.8rem;
     align-items: center;
-    font-size: 1.1rem;
     text-transform: uppercase;
 }
 
-.main-navigation ul li {
-    margin-right: 4rem;
+.cta--main {
+    margin: 0;
+    background: linear-gradient(90deg, hsl(312, 100%, 35%) 0%, hsl(220, 88%, 48%) 100%);
 }
 
-ul li.cta {
-    font-size: 1.2rem;
-    font-weight: 800;
-    margin-right: 0;
-    background-color: red;
-    padding: 1rem 2.4rem;
-    border-radius: 20px;
+.cta--main:hover {
+    transform: scale(1);
+    background: var(--green);
 }
 
 /* -------------------------------- MAIN ------------------------------------ */
+.info {
+    position: relative;
+}
+
+.info__inner {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10rem 2rem;
+}
+
+.info--snowy {
+    background-image: url("../img/images/background-02.png");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.info--dark {
+    background: var(--black-bg);
+}
+
+.info__inner--bigger {
+    max-width: 66.5rem;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.review {
+    width: 48%;
+    max-width: 30rem;
+    text-align: left;
+}
+
+.review__quote {
+    background: var(--lightblue);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    height: calc(100% - 4.8rem);
+}
+
+.review__arrow {
+    position: relative;
+    top: -1rem;
+    left: 3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: rotate(45deg);
+    background: var(--lightblue);
+}
+
+.review__name {
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0);
+    } 50% {
+        transform: rotate(4deg);
+    } 100% {
+        transform: rotate(0);
+    }
+}
+
+.trees-bg svg {
+    max-width: 18%;
+    position: absolute;
+    top: 4rem;
+    animation-name: swing;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.trees-bg--left {
+    left: -2rem;
+    animation-delay: 0.4s;
+}
+
+.trees-bg--right {
+    right: -2rem;
+}
+
+.impression {
+    background-image: url("../img/images/spotlight-01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 42vh;
+}
 
 /* ------------------------------- FOOTER ----------------------------------- */
