@@ -1,3 +1,9 @@
+:root {
+    --blue: hsl(220, 93%, 11%);
+    --green: hsl(149, 76%, 46%);
+    --black-bg: hsla(0, 0%, 0%, 0.4);
+}
+
 @font-face {
     font-family: 'ITC Avant Garde Gothic Std';
     src: url('../fonts/ITCAvantGardeStd-Bold.woff2') format('woff2'),
@@ -15,3 +21,67 @@
     font-style: normal;
     font-display: swap;
 }
+
+body {
+    background-color: var(--blue);
+    color: white;
+    font-family: 'Raleway';
+    padding: 0 6rem;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ---------------------------- HEADER-VIDEO -------------------------------- */
+video {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    max-width: none;
+}
+
+/* ------------------------------- HEADER ----------------------------------- */
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.logo {
+    width: 100%;
+    max-width: 14rem;
+}
+
+.main-navigation ul {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.main-navigation ul li {
+    margin-right: 4rem;
+}
+
+ul li.cta {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-right: 0;
+    background-color: red;
+    padding: 1rem 2.4rem;
+    border-radius: 20px;
+}
+
+/* -------------------------------- MAIN ------------------------------------ */
+
+/* ------------------------------- FOOTER ----------------------------------- */
