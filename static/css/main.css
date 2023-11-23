@@ -103,7 +103,7 @@ p {
 /* ---------------------------- HEADER-VIDEO -------------------------------- */
 
 .video-container {
-    margin-bottom: 81rem;
+    margin-bottom: 100vh;
 }
 
 video {
