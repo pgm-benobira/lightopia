@@ -117,6 +117,32 @@ video {
     max-width: none;
 }
 
+.sticker {
+    position: absolute;
+    bottom: 8rem;
+    right: 8rem;
+    display: inline-block;
+    background-color: hsla(312, 100%, 35%, 0.08);
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    backdrop-filter: blur(15px); 
+}
+
+.sticker__date {
+    font-family: 'ITC Avant Garde Gothic Std';
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    margin: 0 auto;
+    margin-top: 3.3rem;
+    padding: 0.6rem 0;
+    border-top: 3px var(--green) dotted;
+    border-bottom: 3px var(--green) dotted;
+    width: 8rem;
+}
+
 /* ------------------------------- HEADER ----------------------------------- */
 
 .main-header {
