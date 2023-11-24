@@ -213,7 +213,7 @@ video {
 .segment--snowy {
     background-image: url("../img/images/background-02.png");
     background-repeat: repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 
 /* Dark segment */
@@ -300,6 +300,12 @@ video {
 
 .tree--r {
     right: -2rem;
+}
+
+@media (max-width: 52.75rem) {
+    .trees {
+        display: none;
+    }
 }
 
 /* Image banner */
