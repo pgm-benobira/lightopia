@@ -31,10 +31,10 @@ function generateHTMLForGalleryFocus (photo) {
     return `
     <div class="gallery-focus__inner">
         <div class="button-container">
-            <button class="remove">x</button>
+            <button class="remove"><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 26.12 26.12"><defs><style>.cls-1{fill:none;stroke:#989898;stroke-miterlimit:10;stroke-width:3px}</style></defs><path d="m1.06 1.06 24 24M25.06 1.06l-24 24" class="cls-1"/></svg></button>
         </div>
         <div class="photo-container">
-            <img class="gallery__photo" src="${photo.imageLink}" alt="${photo.name}">
+            <img src="${photo.imageLink}" alt="${photo.name}">
         </div>
     </div>
     `;
