@@ -241,6 +241,13 @@ video {
     text-align: left;
 }
 
+@media (max-width: 37rem) {
+    .review {
+        width: 100%;
+        max-width: none;
+    }
+}
+
 .review__quote {
     background: var(--lightblue);
     padding: 2rem 3rem;
