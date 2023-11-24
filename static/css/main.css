@@ -424,6 +424,18 @@ footer p {
     gap: 8rem;
 }
 
+@media (max-width: 37rem) {
+    footer {
+        display: block;
+    }
+    .footer__container {
+        display: block;
+    }
+    .language {
+        padding-top: 1rem;
+    }
+}
+
 /* Socials */
 
 .socials {
@@ -442,4 +454,10 @@ footer p {
 
 .small-text {
     font-size: 0.86rem;
+}
+
+@media (max-width: 52.75rem) {
+    .logo--footer {
+        display: none;
+    }
 }
