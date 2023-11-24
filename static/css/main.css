@@ -163,15 +163,20 @@ video {
     top: 0;
     width: 100vw;
     max-width: 100%;
-    background-color: var(--blue);
-    padding: 0 4rem;
+    background: linear-gradient(180deg, hsla(0, 100%, 0%, 0.7) 0%, hsla(0, 100%, 0%, 0) 100%);
+    padding: 3.2rem 4rem;
 }
 
 .header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3.2rem 0;
+}
+
+.change-color {
+    transition: 0.2s ease;
+    background: var(--blue);
+    padding: 1.7rem 4rem;
 }
 
 /* Logo */
@@ -202,7 +207,7 @@ video {
 
 .cta--main:hover {
     transform: scale(1);
-    background: var(--green);
+    background: linear-gradient(90deg, hsl(149deg 76% 46%) 0%, hsl(197deg 89% 39%) 100%);
 }
 
 /* -------------------------------- MAIN ------------------------------------ */
