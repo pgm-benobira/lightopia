@@ -1,5 +1,18 @@
+const $headerElement = document.querySelector('.main-header');
 const $galleryElement = document.querySelector('.gallery');
 const $galleryFocusElement = document.querySelector('.gallery-focus');
+
+// ---------------- HEADER -------------------------------------------
+// Add background color when scrolling past 100px
+function changeBackgroundColor () {
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            $headerElement.classList.add('change-color');
+        } else {
+            $headerElement.classList.remove('change-color');
+        }
+    })
+};
 
 // ---------------- GALLERY ------------------------------------------
 // Generate the HTML for the gallery
@@ -50,6 +63,8 @@ function generateUIForGalleryFocus (id) {
 // ---------------- GENERATE USER INTERFACE ------------------------------------------
 // Show the user interface for 'Lightopia'
 function generateUI () {
+    // Add scrolling event
+    changeBackgroundColor()
     // Show the gallery
     generateUIForGallery();
 }
