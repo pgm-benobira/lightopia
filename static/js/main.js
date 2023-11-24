@@ -5,7 +5,7 @@ const $galleryFocusElement = document.querySelector('.gallery-focus');
 // Generate the HTML for the gallery
 function generateHTMLForGallery (photos) {
     return photos.map((photo) => `
-        <img class="gallery__photo" src="${photo.imageLink}" alt="${photo.name}">
+        <img class="gallery__photo" src="${photo.imageLink}" alt="${photo.name}" data-id="${photo.id}">
     `).join('');
 }
 
