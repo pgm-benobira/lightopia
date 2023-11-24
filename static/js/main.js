@@ -4,7 +4,7 @@ const $galleryFocusElement = document.querySelector('.gallery-focus');
 
 // ---------------- HEADER -------------------------------------------
 // Add background color when scrolling past 100px
-function changeBackgroundColor () {
+function changeHeader () {
     window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             $headerElement.classList.add('change-color');
@@ -64,7 +64,7 @@ function generateUIForGalleryFocus (id) {
 // Show the user interface for 'Lightopia'
 function generateUI () {
     // Add scrolling event
-    changeBackgroundColor()
+    changeHeader()
     // Show the gallery
     generateUIForGallery();
 }

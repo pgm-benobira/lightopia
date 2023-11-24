@@ -193,11 +193,26 @@ video {
 
 /* Navigation */
 
+.main-navigation--mobile {
+    display: none;
+}
+
 .main-navigation ul {
     display: flex;
     gap: 3.8rem;
     align-items: center;
     text-transform: uppercase;
+}
+
+.main-navigation--mobile ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navigation-icon {
+    width: 2.2rem;
+    height: 2.2rem;
 }
 
 .cta--main {
@@ -208,6 +223,53 @@ video {
 .cta--main:hover {
     transform: scale(1);
     background: linear-gradient(90deg, hsl(149deg 76% 46%) 0%, hsl(197deg 89% 39%) 100%);
+}
+
+@media (max-width: 71.25rem) {
+    .main-header {
+        transition: 0.2s ease;
+        padding: 1.7rem 2rem;
+    }
+}
+
+@media (max-width: 62.5rem) {
+    .logo {
+        max-width: 11rem;
+    }
+    .logo:hover {
+        transform: none;
+    }
+    .cta--main {
+        padding: 0.9rem 2.3rem;
+        padding-top: 1.1rem;
+    }
+    .main-navigation {
+        display: none;
+    }
+    .main-navigation--mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 37.5rem) {
+    .main-header {
+        padding: 1.2rem 1.6rem;
+    }
+    .logo {
+        max-width: 9rem;
+    }
+    .cta--main {
+        padding: 0.7rem 1.6rem;
+        padding-top: 1rem;
+        border-radius: 16px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 27.5rem) {
+    .cta--main {
+        display: none;
+    }
 }
 
 /* -------------------------------- MAIN ------------------------------------ */
