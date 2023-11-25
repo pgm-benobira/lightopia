@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'ITC Avant Garde Gothic Std';
-    src: url('../fonts/ITCAvantGardeStd-Bold.woff2') format('woff2'),
+    src: url('../fonts/ITCAvantGardeStd-Md.woff2') format('woff2'),
         url('../fonts/ITCAvantGardeStd-Md.woff') format('woff');
     font-weight: 500;
     font-style: normal;
@@ -34,6 +34,7 @@ body {
 
 ul {
     list-style-type: none;
+    padding-left: 0;
 }
 
 a {
@@ -131,6 +132,7 @@ video {
 
 .sticker__date {
     font-family: 'ITC Avant Garde Gothic Std';
+    font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -197,14 +199,14 @@ video {
     display: none;
 }
 
-.main-navigation ul {
+.main-navigation__links {
     display: flex;
     gap: 3.8rem;
     align-items: center;
     text-transform: uppercase;
 }
 
-.main-navigation--mobile ul {
+.main-navigation--mobile__links {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -213,6 +215,71 @@ video {
 .navigation-icon {
     width: 2.2rem;
     height: 2.2rem;
+}
+
+.menu-container {
+    /* display: none; */
+    position: fixed;
+    background: var(--blue);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: auto auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'ITC Avant Garde Gothic Std';
+    font-size: 1.6rem;
+}
+
+.close-container {
+    padding-bottom: 1rem;
+}
+
+.close {
+    display: block;
+    border: none;
+    background: none;
+    width: 3.4rem;
+    height: 3.4rem;
+    margin: 2rem;
+    margin-left: auto;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.menu {
+    margin-top: 30%;
+}
+
+.menu__links {
+    margin-bottom: 3rem;
+}
+
+.menu__link {
+    padding-bottom: 1rem;
+}
+
+.menu__Link--active {
+    border-bottom: 3px solid var(--green);
+}
+
+.menu__languages {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-top: 3rem;
+}
+
+.menu__language {
+    border-right: 1px solid var(--green);
+    padding: 0 1rem;
+    padding-top: 0.2rem;
+}
+
+.menu__language:last-child {
+    border-right: none;
 }
 
 .cta--main {

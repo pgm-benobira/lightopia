@@ -3,12 +3,13 @@ const $galleryElement = document.querySelector('.gallery');
 const $galleryFocusElement = document.querySelector('.gallery-focus');
 
 // ---------------- HEADER -------------------------------------------
-// Add background color when scrolling past 100px
+// Change the header when scrolling
 function changeHeader () {
     window.addEventListener('scroll', function () {
+        // When the scrolling is past 50px add the class .change-color
         if (window.scrollY > 50) {
             $headerElement.classList.add('change-color');
-        } else {
+        } else { // If it's not the case (so everything before 50px) remove the class .change-color
             $headerElement.classList.remove('change-color');
         }
     })
