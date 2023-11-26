@@ -212,17 +212,27 @@ video {
     gap: 2rem;
 }
 
+.open-menu {
+    background: none;
+    border: none;
+}
+
+.open-menu:hover {
+    transition: none;
+    cursor: pointer;
+}
+
 .navigation-icon {
     width: 2.2rem;
     height: 2.2rem;
 }
 
 .menu-container {
-    /* display: none; */
     position: fixed;
     background: var(--blue);
     top: 0;
-    left: 0;
+    opacity: 0;
+    left: 100%;
     width: 100%;
     height: 100vh;
     margin: auto auto;
@@ -232,11 +242,17 @@ video {
     font-size: 1.6rem;
 }
 
-.close-container {
+.menu-container-open {
+    opacity: 100%;
+    left: 0;
+    transition: 0.4s ease;
+}
+
+.close-menu-container {
     padding-bottom: 1rem;
 }
 
-.close {
+.close-menu {
     display: block;
     border: none;
     background: none;
@@ -249,7 +265,7 @@ video {
 }
 
 .menu {
-    margin-top: 30%;
+    margin-top: 10vh;
 }
 
 .menu__links {
