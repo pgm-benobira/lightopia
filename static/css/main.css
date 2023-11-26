@@ -245,7 +245,7 @@ video {
 .menu-container-open {
     opacity: 100%;
     left: 0;
-    transition: 0.4s ease;
+    transition: 0.5s ease;
 }
 
 .close-menu-container {
@@ -276,7 +276,7 @@ video {
     padding-bottom: 1rem;
 }
 
-.menu__Link--active {
+.menu__link--active {
     border-bottom: 3px solid var(--green);
 }
 
@@ -352,6 +352,9 @@ video {
 @media (max-width: 27.5rem) {
     .cta--main {
         display: none;
+    }
+    .cta--menu {
+        display: inline-block;
     }
 }
 

@@ -17,31 +17,7 @@ function changeHeader () {
 };
 
 // ---------------- MENU ---------------------------------------------
-function generateHTMLForMenu () {
-    return `
-    <div class="close-menu-container">
-        <button class="close-menu"><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 26.12 26.12"><defs><style>.cls-1{fill:none;stroke:#ffffff;stroke-miterlimit:10;stroke-width:3px}</style></defs><path d="m1.06 1.06 24 24M25.06 1.06l-24 24" class="cls-1"/></svg></button>
-    </div>
-    <div class="menu">
-        <ul class="menu__links">
-            <li class="menu__link"><a class="menu__Link--active" href="">Home</a></li>
-            <li class="menu__link"><a href="">Parcours</a></li>
-            <li class="menu__link"><a href="">Praktisch</a></li>
-            <li class="menu__link"><a href="">Galerij</a></li>
-            <li class="menu__link"><a href="">FAQ</a></li>
-        </ul>
-        <a class="cta cta--main" href="">Tickets</a>
-        <ul class="menu__languages">
-            <li class="menu__language"><a href="">Nl</a></li>
-            <li class="menu__language"><a href="">Fr</a></li>
-            <li class="menu__language"><a href="">En</a></li>
-        </ul>
-    </div>
-    `
-}
-
 function generateUIForMenu () {
-    $menuElement.innerHTML = generateHTMLForMenu();
     document.querySelector('.open-menu').addEventListener('click', () => {
         $menuElement.classList.add('menu-container-open')
     })
