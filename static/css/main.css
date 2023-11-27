@@ -32,6 +32,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    margin-top: 7.6rem;
+}
+
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -104,7 +108,8 @@ p {
 /* ---------------------------- HEADER-VIDEO -------------------------------- */
 
 .video-container {
-    margin-bottom: 100vh;
+    height: 100vh;
+    margin-bottom: -7.6rem;
 }
 
 video {
