@@ -75,6 +75,16 @@ h1 {
     font-size: 2.6rem;
     line-height: 108%;
     text-transform: uppercase;
+    position: relative;
+}
+
+h1::after {
+    display: block;
+    content: '';
+    width: 10rem;
+    height: 0.15rem;
+    background: var(--green);
+    margin: 2.5rem auto;
 }
 
 h3 {
@@ -84,17 +94,18 @@ h3 {
     text-transform: uppercase;
 }
 
+h3::after {
+    display: block;
+    content: '';
+    width: 2.5rem;
+    height: 0.15rem;
+    background: var(--green);
+    margin: 0.8rem 0;
+}
+
 p {
     font-size: 1.4rem;
     margin-bottom: 2rem;
-}
-
-.border {
-    width: 100%;
-    max-width: 10rem;
-    height: 0.14rem;
-    background: var(--green);
-    margin: 2rem auto;
 }
 
 .border--small {
@@ -582,6 +593,8 @@ video {
     max-height: 85vh;
 }
 
+/* ------------------------------- FOOTER ----------------------------------- */
+
 /* Newsletter form */
 
 .newsletter__form input {
@@ -614,9 +627,9 @@ video {
     right: 0;
 }
 
-/* ------------------------------- FOOTER ----------------------------------- */
+/* Footer-bottom */
 
-footer {
+.footer--bottom {
     max-width: 85.5rem;
     margin: 0 auto;
     padding: 5rem 2rem 6rem;
@@ -624,20 +637,20 @@ footer {
     justify-content: space-between;
 }
 
-footer p {
+.footer--bottom p {
     font-size: 1.1rem;
 }
 
-.footer__container {
+.footer--bottom__container {
     display: flex;
     gap: 8rem;
 }
 
 @media (max-width: 37rem) {
-    footer {
+    .footer--bottom {
         display: block;
     }
-    .footer__container {
+    .footer--bottom__container {
         display: block;
     }
     .language {

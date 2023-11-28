@@ -57,14 +57,33 @@
             </nav>
         </div>
     </header>
-    <main></main>
-    <footer>
-        <div class="footer__container">
+    <main>
+        <article class="gallery">
+            <!-- here comes the photo-gallery loaded in JS -->
+        </article>
+        <div class="gallery-focus">
+            <!-- here comes the photo-gallery focus loaded in JS -->
+        </div>
+    </main>
+    <footer class="footer--top segment segment--dark">
+        <div class="segment__inner">
+            <h1 class="segment__title">Schrijf u in voor onze nieuwsbrief</h1>
+            <form action="" class="newsletter__form">
+                <input type="text" name="email" placeholder="E-mail adres:">
+                <button class="cta cta--form">Inschrijven</button>
+            </form>
+            <div class="flowers__container">
+                <div class="flowers__container">
+                    <img class="flowers flower--l" src="./static/img/images/background-04-l.png" alt="glowing rose">
+                    <img class="flowers flower--r" src="./static/img/images/background-04-r.png" alt="glowing rose">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer--bottom">
+        <div class="footer--bottom__container">
             <article class="contact">
-                <section class="title">
-                    <h3>Lightopia Brussels</h3>
-                    <div class="border--small"></div>
-                </section>
+                <h3>Lightopia Brussels</h3>
                 <p>Kasteel van Groot-Bijgaarden<br>Isidoor Van Beverenstraat 5<br>1702 Groot-Bijgaarden</p>
                 <p><a href="mailto:contact@kasteelgrootbijgaarden.be">contact@kasteelgrootbijgaarden.be</a><br>Optac n.v.<br>BE0431 656 433</p>
                 <div class="socials">
@@ -75,10 +94,7 @@
                 <p class="small-text"><br><a href="#" target="_self">Algemene voorwaarden</a><br><a href="#" target="_self">Cookies & privacy</a><br>Website by <a href="https://core-graphics.be/" target="_blank">core-graphics.be</a></p>
             </article>
             <article class="language">
-                <section class="title">
-                    <h3>Taal</h3>
-                    <div class="border--small"></div>
-                </section>
+                <h3>Taal</h3>
                 <p><a href="#" target="_self">Nederlands</a><br><a href="#" target="_self">Français</a><br><a href="#" target="_self">English</a></p>
             </article>
         </div>
