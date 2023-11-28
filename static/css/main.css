@@ -44,7 +44,6 @@ ul {
 a {
     color: white;
     text-decoration: none;
-    font-size: 0.9rem;
 }
 
 a:hover {
@@ -242,6 +241,7 @@ video {
 
 .main-navigation__link {
     letter-spacing: 2px;
+    font-size: 0.9rem;
 }
 
 .main-navigation__link--active {
@@ -541,7 +541,7 @@ video {
 
 /* Photo-gallery */
 
-.gallery {
+.gallery--flex {
     display: flex;
     flex-wrap: wrap;
 }
@@ -578,6 +578,10 @@ video {
     transition: 0.6s ease;
     cursor: pointer;
     filter: brightness(72%);
+}
+
+.gallery--grid {
+    display: block;
 }
 
 /* Photo-gallery focus */
@@ -725,7 +729,7 @@ video {
     fill: var(--green);
 }
 
-.small-text {
+p.small-text {
     font-size: 0.86rem;
 }
 
