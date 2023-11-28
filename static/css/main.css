@@ -226,6 +226,21 @@ video {
     text-transform: uppercase;
 }
 
+.main-navigation__link--active {
+    position: relative;
+}
+
+.main-navigation__link--active::after {
+    position: absolute;
+    content: '';
+    width: 0.25rem;
+    height: 0.25rem;
+    background: var(--green);
+    border-radius: 50%;
+    top: 150%;
+    left: 50%;
+}
+
 .main-navigation--mobile__links {
     display: flex;
     align-items: center;
