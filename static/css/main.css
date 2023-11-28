@@ -44,10 +44,19 @@ ul {
 a {
     color: white;
     text-decoration: none;
+    font-size: 0.9rem;
 }
 
 a:hover {
     color: var(--green);
+}
+
+.text-link {
+    border-bottom: 2px solid var(--green);
+}
+
+.text-link:hover {
+    border-bottom: none;
 }
 
 .cta {
@@ -76,6 +85,11 @@ h1 {
     line-height: 108%;
     text-transform: uppercase;
     position: relative;
+    margin-top: 6rem;
+}
+
+h1:first-child {
+    margin-top: 0;
 }
 
 h1::after {
@@ -226,6 +240,10 @@ video {
     text-transform: uppercase;
 }
 
+.main-navigation__link {
+    letter-spacing: 2px;
+}
+
 .main-navigation__link--active {
     position: relative;
 }
@@ -239,6 +257,8 @@ video {
     border-radius: 50%;
     top: 150%;
     left: 50%;
+    transform: scale(1);
+    transition: 1s ease;
 }
 
 .main-navigation--mobile__links {
@@ -336,6 +356,7 @@ video {
 .cta--main {
     margin: 0;
     background: linear-gradient(90deg, hsl(312, 100%, 35%) 0%, hsl(220, 88%, 48%) 100%);
+    letter-spacing: 0;
 }
 
 .cta--main:hover {
@@ -606,6 +627,21 @@ video {
 .photo-container img {
     margin: 0 auto;
     max-height: 85vh;
+}
+
+/* Highlighted span */
+
+.highlighted {
+    display: inline-block;
+    background-color: hsl(219, 94%, 21%);
+    padding: 0.2rem 0.9rem;
+    padding-top: 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-family: 'ITC Avant Garde Gothic Std';
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 /* ------------------------------- FOOTER ----------------------------------- */
