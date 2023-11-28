@@ -2,6 +2,7 @@ const $headerElement = document.querySelector('.main-header');
 const $menuElement = document.querySelector('.menu-container');
 const $galleryElement = document.querySelector('.gallery');
 const $galleryFocusElement = document.querySelector('.gallery-focus');
+const $faqElement = document.querySelector('.faq');
 
 // ---------------- HEADER -------------------------------------------
 // Change the header when scrolling
@@ -72,15 +73,43 @@ function generateUIForGalleryFocus (id) {
     $galleryFocusElement.innerHTML = generateHTMLForGalleryFocus(photo);
 }
 
+// ---------------- FAQ -------------------------------------------------
+function generateHTMLForFaq (items, category) {
+    return `
+    <article class="${category}">
+    <h2>${category}</h2>
+    ${items.filter((item) => item.category === category).map((item) => `
+    <section class="question__container">
+        <p class="question">${item.question}</p>
+        <p class="answer">${item.answer}</p>
+    </section>
+    `).join('')}
+    </article>
+    `;
+}
+
+function generateUIForFaq () {
+    const algemeenHTML = generateHTMLForFaq(questions, 'algemeen');
+    const parcoursHTML = generateHTMLForFaq(questions, 'parcours');
+    const etenHTML = generateHTMLForFaq(questions, 'eten en drinken');
+    const toegankelijkHTML = generateHTMLForFaq(questions, 'toegankelijkheid');
+    const routeHTML = generateHTMLForFaq(questions, 'route & parking');
+    const ticketsHTML = generateHTMLForFaq(questions, 'tickets');
+    const contactHTML = generateHTMLForFaq(questions, 'contact');
+    $faqElement.innerHTML = algemeenHTML + parcoursHTML + etenHTML + toegankelijkHTML + routeHTML + ticketsHTML + contactHTML;
+}
+
 // ---------------- GENERATE USER INTERFACE ------------------------------------------
 // Show the user interface for 'Lightopia'
 function generateUI () {
     // Add scrolling event
-    changeHeader()
+    changeHeader();
     // Show the menu
-    generateUIForMenu()
+    generateUIForMenu();
     // Show the gallery
     generateUIForGallery();
+    // Show the FAQ
+    generateUIForFaq();
 }
 
 // ---------------- INITIALIZE APPLICATION ------------------------------------------
