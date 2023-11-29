@@ -89,6 +89,10 @@ function generateHTMLForFaq (items, category) {
 }
 
 function generateUIForFaq () {
+    const categories = ["algemeen", "parcours"];
+    // Eerst een loop maken die de categorieën haalt uit de array
+    // Dan proberen om ze uit de data te halen in plaats van in const categories 
+
     const algemeenHTML = generateHTMLForFaq(questions, 'algemeen');
     const parcoursHTML = generateHTMLForFaq(questions, 'parcours');
     const etenHTML = generateHTMLForFaq(questions, 'eten en drinken');
@@ -97,7 +101,17 @@ function generateUIForFaq () {
     const ticketsHTML = generateHTMLForFaq(questions, 'tickets');
     const contactHTML = generateHTMLForFaq(questions, 'contact');
     $faqElement.innerHTML = algemeenHTML + parcoursHTML + etenHTML + toegankelijkHTML + routeHTML + ticketsHTML + contactHTML;
-}
+
+    const $elems = $faqElement.querySelectorAll('.question__container')
+    $elems.forEach($elem => {
+        $elem.addEventListener('click', () => {
+            const $answerElement = $elem.querySelector('.answer')
+            $answerElement.classList.toggle('answer--open')
+            const $questionElement = $elem.querySelector('.question')
+            $questionElement.classList.toggle('question--open')
+        });
+    });
+};
 
 // ---------------- GENERATE USER INTERFACE ------------------------------------------
 // Show the user interface for 'Lightopia'

@@ -100,6 +100,13 @@ h1::after {
     margin: 2.5rem auto;
 }
 
+h2 {
+    font-family: 'ITC Avant Garde Gothic Std';
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    padding: 2rem 0;
+}
+
 h3 {
     font-family: 'ITC Avant Garde Gothic Std';
     font-size: 1.25rem;
@@ -646,6 +653,69 @@ video {
     font-weight: bold;
     font-size: 1.1rem;
     text-transform: uppercase;
+}
+
+/* FAQ */
+.question__container {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1.1rem 2rem;
+    margin-bottom: 0.6rem;
+    text-align: left;
+}
+
+.question__container:hover {
+    cursor: pointer;
+}
+
+.question {
+    font-size: 1.32rem;
+    padding: 0;
+    margin: 0;
+    max-width: 95%;
+    position: relative;
+}
+
+.question:hover {
+    opacity: 75%;
+}
+
+.question::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../img/icons/cross.svg);
+    background-repeat: no-repeat;
+    height: 0.8rem;
+    width: 0.8rem;
+    right: -2rem;
+    top: 0.6rem;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.question--open::after {
+    transform: rotate(0);
+    transition: 0.4s ease;
+}
+
+.answer {
+    transition: 0.3s;
+    font-size: 1rem;
+    margin-bottom: 0;
+    max-height: 0;
+    position: relative;
+    top: 1rem;
+    opacity: 0;
+}
+
+.answer--open {
+    transition: 0.6s;
+    margin-top: 1.2rem;
+    margin-bottom: 0.3rem;
+    max-height: 100rem;
+    top: 0rem;
+    opacity: 100;
 }
 
 /* ------------------------------- FOOTER ----------------------------------- */
