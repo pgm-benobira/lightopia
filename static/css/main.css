@@ -538,8 +538,15 @@ video {
 
 /* Image banner */
 
-.impression {
+.impression--1 {
     background-image: url("../img/images/spotlight-01.jpg");
+}
+
+.impression--2 {
+    background-image: url("../img/images/spotlight-02.jpg");
+}
+
+.impression {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
