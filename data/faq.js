@@ -7,7 +7,7 @@ const questions = [
     {
         category: "algemeen",
         question: "Waar vindt Lightopia Brussels plaats?",
-        answer: 'Lightopia Brussels vindt plaats in het kasteel van Groot-Bijgaarden.<br><a href="https://maps.app.goo.gl/39GUcb31habTcMh39" target="_blank">Isidoor van Beverenstraat 5 <br>1702 Groot-Bijgaarden</a>',
+        answer: 'Lightopia Brussels vindt plaats in het kasteel van Groot-Bijgaarden.<br><a class="text-link" href="https://maps.app.goo.gl/39GUcb31habTcMh39" target="_blank">Isidoor van Beverenstraat 5 <br>1702 Groot-Bijgaarden</a>',
     },
     {
         category: "algemeen",
@@ -17,12 +17,12 @@ const questions = [
     {
         category: "algemeen",
         question: "Op welke data vindt het evenement plaats en wat zijn de openingsuren?",
-        answer: 'Het lantaarn- en lichtfestival wordt geopend van 18 november 2022 tot 8 januari 2023. <a href="https://tickets.grandbigard.be/nl" target="_blank">Kies je data</a>.<br>Openingsuren: Deuren open van 17u00 tot 20u30 (laatste toegang).Einde evenement: 22:00 uur.',
+        answer: 'Het lantaarn- en lichtfestival wordt geopend van 18 november 2022 tot 8 januari 2023. <a class="text-link" href="https://tickets.grandbigard.be/nl" target="_blank">Kies je data</a>.<br>Openingsuren: Deuren open van 17u00 tot 20u30 (laatste toegang).Einde evenement: 22:00 uur.',
     },
     {
         category: "algemeen",
         question: "Welke dagen zijn dalperiode en piekperiode?",
-        answer: 'Daldagen: maandagen tot donderdagen Piekdagen: weekends, vakanties en Kerstperiode (zeer populaire data)<br>Opgelet: kijk <a href="#" target="_blank">hier</a> de openingsdagen na.<br>Deze prijsstelling helpt bezoekers om tijdens een goedkopere periode naar Lightopia te komen.',
+        answer: 'Daldagen: maandagen tot donderdagen Piekdagen: weekends, vakanties en Kerstperiode (zeer populaire data)<br>Opgelet: kijk <a class="text-link" href="#" target="_blank">hier</a> de openingsdagen na.<br>Deze prijsstelling helpt bezoekers om tijdens een goedkopere periode naar Lightopia te komen.',
     },
     {
         category: "parcours",
@@ -92,7 +92,7 @@ const questions = [
     {
         category: "eten en drinken",
         question: "Ik heb vragen over het Twinkling Café van Lightopia Brussels. Wie kan ik contacteren?",
-        answer: 'Stuur je vragen naar: <a href="mailto:info@lightopia.be">info@lightopia.be</a>.',
+        answer: 'Stuur je vragen naar: <a class="text-link" href="mailto:info@lightopia.be">info@lightopia.be</a>.',
     },
     {
         category: "toegankelijkheid",
@@ -102,32 +102,32 @@ const questions = [
     {
         category: "toegankelijkheid",
         question: "Bieden jullie een gratis ticket aan voor de begeleider van rolstoelgebruikers?",
-        answer: 'Personen met een rolstoel die een ticket koopt, heeft recht op één gratis onmisbare begeleider. De begeleider mag zich melden aan de ingang en heeft recht op een gratis toegang.<br>LET OP: U hoeft geen ticket voor de begeleider te kopen. Als u dat wel doet, kunnen wij uw ticket niet terugstorten.<br>Voor verdere vragen kunt u een e-mail sturen naar <a href="mailto:info@lightopia.be">info@lightopia.be</a>.',
+        answer: 'Personen met een rolstoel die een ticket koopt, heeft recht op één gratis onmisbare begeleider. De begeleider mag zich melden aan de ingang en heeft recht op een gratis toegang.<br>LET OP: U hoeft geen ticket voor de begeleider te kopen. Als u dat wel doet, kunnen wij uw ticket niet terugstorten.<br>Voor verdere vragen kunt u een e-mail sturen naar <a class="text-link" href="mailto:info@lightopia.be">info@lightopia.be</a>.',
     },
     {
         category: "route & parking",
         question: "Hoe kom ik naar Lightopia Brussel?",
-        answer: 'Lightopia Brussels is vlot bereikbaar met de auto en het openbaar vervoer. <a href="#" target="_blank">Klik hier</a> voor meer informatie.',
+        answer: 'Lightopia Brussels is vlot bereikbaar met de auto en het openbaar vervoer. <a class="text-link" href="#" target="_blank">Klik hier</a> voor meer informatie.',
     },
     {
         category: "route & parking",
         question: "Hoe kom ik met het openbaar vervoer naar het kasteel?",
-        answer: 'Lightopia Brussels is bereikbaar met de auto en het openbaar vervoer. <a href="#" target="_blank">Klik hier</a> voor meer informatie.',
+        answer: 'Lightopia Brussels is bereikbaar met de auto en het openbaar vervoer. <a class="text-link" href="#" target="_blank">Klik hier</a> voor meer informatie.',
     },
     {
         category: "route & parking",
         question: "Is er een parking?",
-        answer: 'Ga naar de parking van Hocké:<a href="https://maps.app.goo.gl/NiaLMipyx1oBwNdN6" target="_blank">A. Gossetlaan 13 - 1702 Groot-Bijgaarden</a>Onze parkeerwachters zullen u begeleiden naar de juiste plaats.<br>U kunt <a href="https://tickets.grandbigard.be/nl" target="_blank">uw parkeerticket online kopen</a> of ter plaatse voor 5 euro per wagen. De parking is enkel toegankelijk op vertoon van een parkeerticket en voor de duur van het bezoek.<br>Maak gebruik van onze shuttledienst die u veilig naar Lightopia Brussels brengt.',
+        answer: 'Ga naar de parking van Hocké:<a class="text-link" href="https://maps.app.goo.gl/NiaLMipyx1oBwNdN6" target="_blank">A. Gossetlaan 13 - 1702 Groot-Bijgaarden</a>Onze parkeerwachters zullen u begeleiden naar de juiste plaats.<br>U kunt <a class="text-link" href="https://tickets.grandbigard.be/nl" target="_blank">uw parkeerticket online kopen</a> of ter plaatse voor 5 euro per wagen. De parking is enkel toegankelijk op vertoon van een parkeerticket en voor de duur van het bezoek.<br>Maak gebruik van onze shuttledienst die u veilig naar Lightopia Brussels brengt.',
     },
     {
         category: "route & parking",
         question: "Is er een parkeerplaats voor bezoekers met een handicap?",
-        answer: 'Ja, Lightopia Brussels is toegankelijk voor rolstoelgebruikers en scooters. Er is een gehandicaptenparking beschikbaar op de parking van Hocké.<br>Parkeeradres:<a href="https://maps.app.goo.gl/NiaLMipyx1oBwNdN6" target="_blank">A. Gossetlaan 13 - 1702 Groot-Bijgaarden</a><br>Onze parkeerwachters zullen u begeleiden naar de juiste plaats.Maak gebruik van onze shuttledienst die u veilig naar Lightopia Brussels brengt.',
+        answer: 'Ja, Lightopia Brussels is toegankelijk voor rolstoelgebruikers en scooters. Er is een gehandicaptenparking beschikbaar op de parking van Hocké.<br>Parkeeradres:<a class="text-link" href="https://maps.app.goo.gl/NiaLMipyx1oBwNdN6" target="_blank">A. Gossetlaan 13 - 1702 Groot-Bijgaarden</a><br>Onze parkeerwachters zullen u begeleiden naar de juiste plaats.Maak gebruik van onze shuttledienst die u veilig naar Lightopia Brussels brengt.',
     },
     {
         category: "tickets",
         question: "Waar kan ik tickets kopen?",
-        answer: 'U kunt uw <a href="https://tickets.grandbigard.be/nl" target="_blank">tickets online kopen</a> of ter plaatse aan de kassa via contant geld, bancontact of kredietkaart, als er nog toegangstickets beschikbaar zijn.<br>Wanneer u tickets ter plaatse aankoopt zal er een supplement van € 2.00 per ticket aangerekend worden.',
+        answer: 'U kunt uw <a class="text-link" href="https://tickets.grandbigard.be/nl" target="_blank">tickets online kopen</a> of ter plaatse aan de kassa via contant geld, bancontact of kredietkaart, als er nog toegangstickets beschikbaar zijn.<br>Wanneer u tickets ter plaatse aankoopt zal er een supplement van € 2.00 per ticket aangerekend worden.',
     },
     {
         category: "tickets",
@@ -137,7 +137,7 @@ const questions = [
     {
         category: "tickets",
         question: "Hoeveel kosten de tickets?",
-        answer: 'Onze prijzen vind je op onze <a href="https://tickets.grandbigard.be/nl" target="_blank">ticketpagina</a>.',
+        answer: 'Onze prijzen vind je op onze <a class="text-link" href="https://tickets.grandbigard.be/nl" target="_blank">ticketpagina</a>.',
     },
     {
         category: "tickets",
@@ -167,17 +167,17 @@ const questions = [
     {
         category: "tickets",
         question: "Hoe/wanneer ontvang ik mijn tickets?",
-        answer: 'Na de betaling ontvangt u onmiddelijk de tickets in uw mailbox. Moest u deze niet ontvangen hebben, neem contact op met <a href="mailto:info@lightopia.be">info@lightopia.be</a>.<br>Controleer altijd uw spam.',
+        answer: 'Na de betaling ontvangt u onmiddelijk de tickets in uw mailbox. Moest u deze niet ontvangen hebben, neem contact op met <a class="text-link" href="mailto:info@lightopia.be">info@lightopia.be</a>.<br>Controleer altijd uw spam.',
     },
     {
         category: "tickets",
         question: "Ik kan mijn tickets niet vinden of ben ze kwijt, wat moet ik doen?",
-        answer: 'Na het afronden van uw ticket aankoop, ontvangt u een bevestigingsmail en uw tickets in uw mailbox.<br>U kunt ons ook een e-mail sturen op <a href="mailto:info@lightopia.be">info@lightopia.be</a> als u uw tickets niet kunt vinden. Vermeld daarbij zoveel mogelijk informatie, zoals de locatie, het bestelnummer, de naam en het e-mailadres waarmee u de tickets hebt geboekt.<br>Let op: onze klantenservice kan u niet onmiddellijk te woord staan en heeft meestal minimum 24 uur nodig om op uw vragen te reageren. Controleer uw tickets minimum 2 dagen voor het evenement.',
+        answer: 'Na het afronden van uw ticket aankoop, ontvangt u een bevestigingsmail en uw tickets in uw mailbox.<br>U kunt ons ook een e-mail sturen op <a class="text-link" href="mailto:info@lightopia.be">info@lightopia.be</a> als u uw tickets niet kunt vinden. Vermeld daarbij zoveel mogelijk informatie, zoals de locatie, het bestelnummer, de naam en het e-mailadres waarmee u de tickets hebt geboekt.<br>Let op: onze klantenservice kan u niet onmiddellijk te woord staan en heeft meestal minimum 24 uur nodig om op uw vragen te reageren. Controleer uw tickets minimum 2 dagen voor het evenement.',
     },
     {
         category: "tickets",
         question: "Krijg ik korting als ik met een groep kom?",
-        answer: 'Vanaf 20 personen krijgt u 2 euro korting per persoon op de normale prijs (buiten piek € 18,50 / piek € 22,50). Wij raden u aan <a href="#" target="_blank">uw tickets online te reserveren</a>. Voor meer vragen over groepsboekingen, contacteer <a href="mailto:info@lightopia.be">info@lightopia.be</a>.',
+        answer: 'Vanaf 20 personen krijgt u 2 euro korting per persoon op de normale prijs (buiten piek € 18,50 / piek € 22,50). Wij raden u aan <a class="text-link" href="#" target="_blank">uw tickets online te reserveren</a>. Voor meer vragen over groepsboekingen, contacteer <a class="text-link" href="mailto:info@lightopia.be">info@lightopia.be</a>.',
     },
     {
         category: "contact",
@@ -187,6 +187,6 @@ const questions = [
     {
         category: "contact",
         question: "Hebben jullie een contactpersoon voor influencers, media of pers?",
-        answer: 'Neem dan contact op via <a href="mailto:info@lightopia.be">info@lightopia.be</a>.',
+        answer: 'Neem dan contact op via <a class="text-link" href="mailto:info@lightopia.be">info@lightopia.be</a>.',
     },
 ];
