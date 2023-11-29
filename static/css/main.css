@@ -563,14 +563,13 @@ video {
 .gallery__photo {
     object-fit: cover;
     width: 20%;
-    max-height: 24vh;
+    aspect-ratio: 1.25;
 }
 
 @media (max-width: 52.75rem) {
     .gallery__photo {
         width: 33%;
         flex-grow: 1;
-        max-height: 21vh;
     }
     .gallery__photo:last-child {
         max-width: 33%;
@@ -581,7 +580,6 @@ video {
     .gallery__photo {
         width: 50%;
         flex-grow: 1;
-        max-height: 18vh;
     }
     .gallery__photo:last-child {
         max-width: none;
