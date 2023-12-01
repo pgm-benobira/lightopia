@@ -1,5 +1,6 @@
 const $headerElement = document.querySelector('.main-header');
 const $menuElement = document.querySelector('.menu-container');
+const $buttonElement = document.querySelector('.open-menu')
 const $galleryElement = document.querySelector('.gallery');
 const $galleryFocusElement = document.querySelector('.gallery-focus');
 const $faqElement = document.querySelector('.faq');
@@ -20,10 +21,8 @@ function changeHeader () {
 // ---------------- MENU ---------------------------------------------
 function generateUIForMenu () {
     document.querySelector('.open-menu').addEventListener('click', () => {
-        $menuElement.classList.add('menu-container-open')
-    })
-    document.querySelector('.close-menu').addEventListener('click', () => {
-        $menuElement.classList.remove('menu-container-open')
+        $menuElement.classList.toggle('menu-container-open')
+        $buttonElement.classList.toggle('open-menu-active')
     })
 }
 
