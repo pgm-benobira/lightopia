@@ -364,11 +364,32 @@ video {
     margin: 0;
     background: linear-gradient(90deg, hsl(312, 100%, 35%) 0%, hsl(220, 88%, 48%) 100%);
     letter-spacing: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta--main span {
+    position: relative;
+}
+
+.cta--main::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, hsl(149deg 76% 46%) 0%, hsl(197deg 89% 39%) 100%);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: 0.18s ease;
+}
+
+.cta--main:hover::before {
+    top: 0;
 }
 
 .cta--main:hover {
     transform: scale(1);
-    background: linear-gradient(90deg, hsl(149deg 76% 46%) 0%, hsl(197deg 89% 39%) 100%);
 }
 
 @media (max-width: 71.25rem) {
