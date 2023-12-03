@@ -23,7 +23,9 @@
     font-display: swap;
 }
 
-/* ------------------------------ GENERAL ---------------------------------- */
+/* ══════════════════════════════════════════════════════════════════════════════════════
+════════════════════════════════════════ GENERAL ════════════════════════════════════════
+══════════════════════════════════════════════════════════════════════════════════════ */
 
 body {
     background-color: var(--blue);
@@ -136,7 +138,11 @@ p {
     margin: 1.2rem 0;
 }
 
-/* ---------------------------- HEADER-VIDEO -------------------------------- */
+/* ══════════════════════════════════════════════════════════════════════════════════════
+══════════════════════════════════════ HEADER-VIDEO ═════════════════════════════════════
+══════════════════════════════════════════════════════════════════════════════════════ */
+
+/* Video */
 
 .video-container {
     height: 100vh;
@@ -154,12 +160,14 @@ video {
     max-width: none;
 }
 
+/* Sticker */
+
 .sticker {
     position: absolute;
     bottom: 8%;
     right: 8%;
     display: inline-block;
-    background-color: hsla(312, 100%, 35%, 0.08);
+    background: linear-gradient(45deg, hsla(312, 100%, 35%, 0.1) 0%, hsla(220, 93%, 11%, 0.1) 100%);
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
@@ -193,7 +201,9 @@ video {
     }
 }
 
-/* ------------------------------- HEADER ----------------------------------- */
+/* ══════════════════════════════════════════════════════════════════════════════════════
+════════════════════════════════════════ HEADER ═════════════════════════════════════════
+══════════════════════════════════════════════════════════════════════════════════════ */
 
 .main-header {
     position: fixed;
@@ -221,7 +231,7 @@ video {
     padding: 1.7rem 4rem;
 }
 
-/* Logo */
+/* ----------------------------------- Logo ------------------------------------------ */
 
 .logo {
     width: 100%;
@@ -233,11 +243,9 @@ video {
     transform: scale(1.04);
 }
 
-/* Navigation */
+/* --------------------------------- Navigation --------------------------------------- */
 
-.main-navigation--mobile {
-    display: none;
-}
+/* Navigation large screen > 1000px */
 
 .main-navigation__links {
     display: flex;
@@ -268,11 +276,19 @@ video {
     transition: 1s ease;
 }
 
+/* Navigation small screen < 1000px */
+
+.main-navigation--mobile {
+    display: none;
+}
+
 .main-navigation--mobile__links {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
+
+/* Open menu button (hamburger) */
 
 .open-menu__container {
     padding-bottom: 0.5rem;
@@ -313,6 +329,8 @@ video {
     bottom: 0;
 }
 
+/* Open menu button active (cross) */
+
 .open-menu-active .line {
     transition: 0.45s ease;
 }
@@ -328,6 +346,8 @@ video {
     transform: rotate(-45deg);
     bottom: 44%;
 }
+
+/* Mobile menu */
 
 .menu-container {
     position: fixed;
@@ -390,6 +410,8 @@ video {
     border-right: none;
 }
 
+/* Main call to action */
+
 .cta--main {
     margin: 0;
     background: linear-gradient(90deg, hsl(312, 100%, 35%) 0%, hsl(220, 88%, 48%) 100%);
@@ -421,6 +443,8 @@ video {
 .cta--main:hover {
     transform: scale(1);
 }
+
+/* Media queries for navigation */
 
 @media (max-width: 71.25rem) {
     .main-header {
@@ -472,9 +496,12 @@ video {
     }
 }
 
-/* -------------------------------- MAIN ------------------------------------ */
 
-/* Segment */
+/* ══════════════════════════════════════════════════════════════════════════════════════
+═════════════════════════════════════════ MAIN ══════════════════════════════════════════
+══════════════════════════════════════════════════════════════════════════════════════ */
+
+/* ------------------------------------- Segment ------------------------------------- */
 
 .segment {
     position: relative;
@@ -587,7 +614,7 @@ video {
     }
 }
 
-/* Image banner */
+/* ---------------------------------- Image banner ----------------------------------- */
 
 .impression--1 {
     background-image: url("../img/images/spotlight-01.jpg");
@@ -604,7 +631,7 @@ video {
     height: 42vh;
 }
 
-/* Photo-gallery */
+/* --------------------------------- Photo-gallery ----------------------------------- */
 
 .gallery--flex {
     display: flex;
@@ -696,7 +723,7 @@ video {
     max-height: 85vh;
 }
 
-/* Highlighted span */
+/* --------------------------------- Highlighted span ---------------------------------- */
 
 .highlighted {
     display: inline-block;
@@ -711,7 +738,8 @@ video {
     text-transform: uppercase;
 }
 
-/* FAQ */
+/* -------------------------------------- FAQ ------------------------------------------ */
+
 .question__container {
     border: 1px solid white;
     border-radius: 10px;
@@ -774,9 +802,12 @@ video {
     opacity: 100;
 }
 
-/* ------------------------------- FOOTER ----------------------------------- */
 
-/* Newsletter form */
+/* ══════════════════════════════════════════════════════════════════════════════════════
+════════════════════════════════════════ FOOTER ═════════════════════════════════════════
+══════════════════════════════════════════════════════════════════════════════════════ */
+
+/* --------------------------------- Newsletter form --------------------------------- */
 
 .newsletter__form input {
     width: 100%;
@@ -808,7 +839,7 @@ video {
     right: 0;
 }
 
-/* Footer-bottom */
+/* -------------------------------- Footer-bottom ------------------------------------ */
 
 .footer--bottom {
     max-width: 85.5rem;
