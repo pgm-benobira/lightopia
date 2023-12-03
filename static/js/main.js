@@ -88,21 +88,20 @@ function generateHTMLForFaq (items, category) {
 }
 
 function generateUIForFaq () {
-    const categories = ["algemeen", "parcours", "eten en drinken", "toegankelijkheid", "route & parking", "tickets", "contact"];
-    // Eerst een loop maken die de categorieën haalt uit de array
+    let categories = ["algemeen", "parcours", "eten en drinken", "toegankelijkheid", "route & parking", "tickets", "contact"];
+    // Tip: Eerst een loop maken die de categorieën haalt uit de array
     for (const category of categories) {
-        console.log(category);
+        console.log(`Category: ${category}`);
     };
-    // Dan proberen om ze uit de data te halen in plaats van in const categories
-
-    const algemeenHTML = generateHTMLForFaq(questions, 'algemeen');
-    const parcoursHTML = generateHTMLForFaq(questions, 'parcours');
-    const etenHTML = generateHTMLForFaq(questions, 'eten en drinken');
-    const toegankelijkHTML = generateHTMLForFaq(questions, 'toegankelijkheid');
-    const routeHTML = generateHTMLForFaq(questions, 'route & parking');
-    const ticketsHTML = generateHTMLForFaq(questions, 'tickets');
-    const contactHTML = generateHTMLForFaq(questions, 'contact');
-    $faqElement.innerHTML = algemeenHTML + parcoursHTML + etenHTML + toegankelijkHTML + routeHTML + ticketsHTML + contactHTML;
+    // Tip: Dan proberen om ze uit de data te halen in plaats van in const categories
+    // Extract unique categories from the question array
+    categories = [...new Set(questions.map(question => question.category))];
+    // Used to accumulate all HTML for all categories
+    let faqHTML = '';
+    for (const category of categories) {
+        faqHTML += generateHTMLForFaq(questions, category);
+    };
+    $faqElement.innerHTML = faqHTML;
 
     const $elems = $faqElement.querySelectorAll('.question__container')
     $elems.forEach($elem => {
