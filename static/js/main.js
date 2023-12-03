@@ -88,9 +88,12 @@ function generateHTMLForFaq (items, category) {
 }
 
 function generateUIForFaq () {
-    const categories = ["algemeen", "parcours"];
+    const categories = ["algemeen", "parcours", "eten en drinken", "toegankelijkheid", "route & parking", "tickets", "contact"];
     // Eerst een loop maken die de categorieën haalt uit de array
-    // Dan proberen om ze uit de data te halen in plaats van in const categories 
+    for (const category of categories) {
+        console.log(category);
+    };
+    // Dan proberen om ze uit de data te halen in plaats van in const categories
 
     const algemeenHTML = generateHTMLForFaq(questions, 'algemeen');
     const parcoursHTML = generateHTMLForFaq(questions, 'parcours');
