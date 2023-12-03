@@ -80,7 +80,7 @@ function generateHTMLForFaq (items, category) {
     ${items.filter((item) => item.category === category).map((item) => `
     <section class="question__container">
         <p class="question">${item.question}</p>
-        <p class="answer">${item.answer}</p>
+        <div class="answer">${item.answer}</div>
     </section>
     `).join('')}
     </article>
