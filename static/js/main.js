@@ -4,8 +4,9 @@ const $buttonElement = document.querySelector('.open-menu')
 const $galleryElement = document.querySelector('.gallery');
 const $galleryFocusElement = document.querySelector('.gallery-focus');
 const $faqElement = document.querySelector('.faq');
+const $mapElement = document.querySelector('.interactive-map')
 
-// ---------------- HEADER -------------------------------------------
+// ---------------- HEADER ------------------------------------------------------------------------------------------------------------------------------
 // Change the header when scrolling
 function changeHeader () {
     window.addEventListener('scroll', function () {
@@ -14,25 +15,25 @@ function changeHeader () {
             $headerElement.classList.add('change-color');
         } else { // If it's not the case (so everything before 50px) remove the class .change-color
             $headerElement.classList.remove('change-color');
-        }
-    })
+        };
+    });
 };
 
-// ---------------- MENU ---------------------------------------------
+// ---------------- MENU --------------------------------------------------------------------------------------------------------------------------------
 function generateUIForMenu () {
     document.querySelector('.open-menu').addEventListener('click', () => {
         $menuElement.classList.toggle('menu-container-open')
         $buttonElement.classList.toggle('open-menu-active')
-    })
-}
+    });
+};
 
-// ---------------- GALLERY ------------------------------------------
+// ---------------- GALLERY -----------------------------------------------------------------------------------------------------------------------------
 // Generate the HTML for the gallery
 function generateHTMLForGallery (photos) {
     return photos.map((photo) => `
         <img class="gallery__photo" src="${photo.imageLink}" alt="${photo.name}" data-id="${photo.id}">
     `).join('');
-}
+};
 
 // Show the gallery
 function generateUIForGallery () {
@@ -46,10 +47,10 @@ function generateUIForGallery () {
             // If the user clicks on the remove button -> class .concert-details--open is removed and closes the concert-details
             document.querySelector('.remove').addEventListener('click', () => {
                 $galleryFocusElement.classList.remove('gallery-focus--open')
-            })
-        })
+            });
+        });
     });
-}
+};
 
 // Generate the HTML for gallery-focus
 function generateHTMLForGalleryFocus (photo) {
@@ -63,16 +64,16 @@ function generateHTMLForGalleryFocus (photo) {
         </div>
     </div>
     `;
-}
+};
 
 // Show the gallery-focus
 function generateUIForGalleryFocus (id) {
     const photo = gallery.find((photo) => photo.id === id);
     $galleryFocusElement.classList.add('gallery-focus--open')
     $galleryFocusElement.innerHTML = generateHTMLForGalleryFocus(photo);
-}
+};
 
-// ---------------- FAQ -------------------------------------------------
+// ---------------- FAQ -------------------------------------------------------------------------------------------------------------------------------
 function generateHTMLForFaq (items, category) {
     return `
     <article class="${category}">
@@ -85,7 +86,7 @@ function generateHTMLForFaq (items, category) {
     `).join('')}
     </article>
     `;
-}
+};
 
 function generateUIForFaq () {
     let categories = ["algemeen", "parcours", "eten en drinken", "toegankelijkheid", "route & parking", "tickets", "contact"];
@@ -114,7 +115,18 @@ function generateUIForFaq () {
     });
 };
 
-// ---------------- GENERATE USER INTERFACE ------------------------------------------
+// ---------------- INTERACTIVE MAP ------------------------------------------------------------------------------------------------------------------
+function generateHTMLForMap () {
+    return `
+    <p>Hello</p>
+    `
+};
+
+function generateUIForMap () {
+    $mapElement.innerHTML = generateHTMLForMap();
+};
+
+// ---------------- GENERATE USER INTERFACE ----------------------------------------------------------------------------------------------------------
 // Show the user interface for 'Lightopia'
 function generateUI () {
     // Add scrolling event
@@ -125,13 +137,15 @@ function generateUI () {
     generateUIForGallery();
     // Show the FAQ
     generateUIForFaq();
-}
+    // Show the map
+    generateUIForMap();
+};
 
-// ---------------- INITIALIZE APPLICATION ------------------------------------------
+// ---------------- INITIALIZE APPLICATION ----------------------------------------------------------------------------------------------------------
 // Start the application 'Lightopia'
 function initialize () {
     generateUI();
 }
 
 // Call the function for the application
-initialize()
+initialize();
