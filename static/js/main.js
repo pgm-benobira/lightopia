@@ -1,6 +1,9 @@
 const $headerElement = document.querySelector('.main-header');
 const $menuElement = document.querySelector('.menu-container');
 const $buttonElement = document.querySelector('.open-menu')
+const $galleryElement = document.querySelectorAll('.photo')
+const $galleryFocusElement = document.querySelector('.gallery-focus');
+const $photoContainer = document.querySelector('.photo-container');
 const $faqElement = document.querySelector('.faq');
 const $mapElement = document.querySelector('.interactive-map')
 
@@ -26,7 +29,22 @@ function generateUIForMenu () {
 };
 
 // ---------------- GALLERY-FOCUS -----------------------------------------------------------------------------------------------------------------------------
+function generateUIForPhoto() {
+    $galleryElement.forEach(photo => {
+        photo.addEventListener('click', () => {
+            // If the user clicks on a photo show the gallery-focus (photo in big)
+            const imageUrl = photo.getAttribute('src');
+            $photoContainer.querySelector('img').setAttribute('src', imageUrl);
 
+            photo.classList.toggle('photo--open')
+            $galleryFocusElement.classList.toggle('gallery-focus--open')
+            // If the user clicks on the remove button -> class .gallery-focus--open is removed and closes the gallery-focus
+            document.querySelector('.remove').addEventListener('click', () => {
+                $galleryFocusElement.classList.remove('gallery-focus--open')
+            });
+        })
+    })
+}
 
 // ---------------- FAQ -------------------------------------------------------------------------------------------------------------------------------
 function generateHTMLForFaq (items, category) {
@@ -47,7 +65,7 @@ function generateUIForFaq () {
     let categories = ["algemeen", "parcours", "eten en drinken", "toegankelijkheid", "route & parking", "tickets", "contact"];
     // Tip: Eerst een loop maken die de categorieën haalt uit de array
     for (const category of categories) {
-        console.log(`Category: ${category}`);
+        // console.log(`Category: ${category}`);
     };
     // Tip: Dan proberen om ze uit de data te halen in plaats van in const categories
     // Extract unique categories from the question array
@@ -88,6 +106,8 @@ function generateUI () {
     changeHeader();
     // Show the menu
     generateUIForMenu();
+    // Show gallery photo
+    generateUIForPhoto()
     // Show the FAQ
     generateUIForFaq();
     // Show the map
