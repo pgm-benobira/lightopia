@@ -1,8 +1,6 @@
 const $headerElement = document.querySelector('.main-header');
 const $menuElement = document.querySelector('.menu-container');
 const $buttonElement = document.querySelector('.open-menu')
-const $galleryFlexElement = document.querySelector('.gallery--flex');
-const $galleryFocusElement = document.querySelector('.gallery-focus');
 const $faqElement = document.querySelector('.faq');
 const $mapElement = document.querySelector('.interactive-map')
 
@@ -27,51 +25,8 @@ function generateUIForMenu () {
     });
 };
 
-// ---------------- GALLERY-FLEX -----------------------------------------------------------------------------------------------------------------------------
-// Generate the HTML for the gallery
-function generateHTMLForGalleryFlex (photos) {
-    return photos.map((photo) => `
-        <img class="gallery__photo" src="${photo.imageLink}" alt="${photo.name}" data-id="${photo.id}">
-    `).join('');
-};
+// ---------------- GALLERY-FOCUS -----------------------------------------------------------------------------------------------------------------------------
 
-// Show the gallery
-function generateUIForGalleryFlex () {
-    $galleryFlexElement.innerHTML = generateHTMLForGalleryFlex(gallery);
-    // If the user clicks on a photo show the gallery-focus (photo in big)
-    const $elems = $galleryFlexElement.querySelectorAll('.gallery__photo');
-    $elems.forEach($elem => {
-        $elem.addEventListener('click', (ev) => {
-            const id = ev.currentTarget.dataset.id; 
-            generateUIForGalleryFocus(id);
-            // If the user clicks on the remove button -> class .concert-details--open is removed and closes the concert-details
-            document.querySelector('.remove').addEventListener('click', () => {
-                $galleryFocusElement.classList.remove('gallery-focus--open')
-            });
-        });
-    });
-};
-
-// Generate the HTML for gallery-focus
-function generateHTMLForGalleryFocus (photo) {
-    return `
-    <div class="gallery-focus__inner">
-        <div class="button-container">
-            <button class="remove"><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 26.12 26.12"><defs><style>.cls-1{fill:none;stroke:#989898;stroke-miterlimit:10;stroke-width:3px}</style></defs><path d="m1.06 1.06 24 24M25.06 1.06l-24 24" class="cls-1"/></svg></button>
-        </div>
-        <div class="photo-container">
-            <img src="${photo.imageLink}" alt="${photo.name}">
-        </div>
-    </div>
-    `;
-};
-
-// Show the gallery-focus
-function generateUIForGalleryFocus (id) {
-    const photo = gallery.find((photo) => photo.id === id);
-    $galleryFocusElement.classList.add('gallery-focus--open')
-    $galleryFocusElement.innerHTML = generateHTMLForGalleryFocus(photo);
-};
 
 // ---------------- FAQ -------------------------------------------------------------------------------------------------------------------------------
 function generateHTMLForFaq (items, category) {
@@ -133,8 +88,6 @@ function generateUI () {
     changeHeader();
     // Show the menu
     generateUIForMenu();
-    // Show the gallery--flex
-    generateUIForGalleryFlex();
     // Show the FAQ
     generateUIForFaq();
     // Show the map
