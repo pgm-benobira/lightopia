@@ -1,7 +1,7 @@
 const $headerElement = document.querySelector('.main-header');
 const $menuElement = document.querySelector('.menu-container');
 const $buttonElement = document.querySelector('.open-menu')
-const $galleryElement = document.querySelector('.gallery');
+const $galleryFlexElement = document.querySelector('.gallery--flex');
 const $galleryFocusElement = document.querySelector('.gallery-focus');
 const $faqElement = document.querySelector('.faq');
 const $mapElement = document.querySelector('.interactive-map')
@@ -27,19 +27,19 @@ function generateUIForMenu () {
     });
 };
 
-// ---------------- GALLERY -----------------------------------------------------------------------------------------------------------------------------
+// ---------------- GALLERY-FLEX -----------------------------------------------------------------------------------------------------------------------------
 // Generate the HTML for the gallery
-function generateHTMLForGallery (photos) {
+function generateHTMLForGalleryFlex (photos) {
     return photos.map((photo) => `
         <img class="gallery__photo" src="${photo.imageLink}" alt="${photo.name}" data-id="${photo.id}">
     `).join('');
 };
 
 // Show the gallery
-function generateUIForGallery () {
-    $galleryElement.innerHTML = generateHTMLForGallery(gallery);
+function generateUIForGalleryFlex () {
+    $galleryFlexElement.innerHTML = generateHTMLForGalleryFlex(gallery);
     // If the user clicks on a photo show the gallery-focus (photo in big)
-    const $elems = $galleryElement.querySelectorAll('.gallery__photo');
+    const $elems = $galleryFlexElement.querySelectorAll('.gallery__photo');
     $elems.forEach($elem => {
         $elem.addEventListener('click', (ev) => {
             const id = ev.currentTarget.dataset.id; 
@@ -133,8 +133,8 @@ function generateUI () {
     changeHeader();
     // Show the menu
     generateUIForMenu();
-    // Show the gallery
-    generateUIForGallery();
+    // Show the gallery--flex
+    generateUIForGalleryFlex();
     // Show the FAQ
     generateUIForFaq();
     // Show the map
