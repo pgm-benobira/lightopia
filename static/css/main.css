@@ -559,19 +559,23 @@ video {
     padding: 2rem 3rem;
     border-radius: 10px;
     height: calc(100% - 4.8rem);
+    position: relative;
+    /* margin-bottom: 1rem; */
 }
 
-.review__arrow {
-    position: relative;
-    top: -1rem;
-    left: 3rem;
+.review__quote::after{
+    content: '';
+    display: block;
+    background-color: var(--lightblue);
     width: 1.5rem;
     height: 1.5rem;
     transform: rotate(45deg);
-    background: var(--lightblue);
+    position: absolute;
+    bottom: -0.4rem;
 }
 
 .review__name {
+    margin-top: 1rem;
     padding-left: 2rem;
     font-size: 0.9rem;
     font-weight: 700;
