@@ -53,11 +53,16 @@ a:hover {
 }
 
 .text-link {
-    border-bottom: 2px solid var(--green);
+    text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    transition: 0.2s ease;
 }
 
 .text-link:hover {
-    border-bottom: none;
+    text-decoration: none;
+    transition: 0.2s ease;
 }
 
 .cta {
