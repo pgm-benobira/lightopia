@@ -80,6 +80,15 @@ function generateUIForFaq () {
     const $elems = $faqElement.querySelectorAll('.question__container')
     $elems.forEach($elem => {
         $elem.addEventListener('click', () => {
+            // Close the previous open question to just show one at a time
+            $elems.forEach($openElem => {
+                // Search through the questions, if one is open when clicking on another one close it by removing the classes
+                if ($openElem !== $elem) {
+                    $openElem.querySelector('.answer').classList.remove('answer--open')
+                    $openElem.querySelector('.question').classList.remove('question--open')
+                };
+            });
+
             const $answerElement = $elem.querySelector('.answer')
             $answerElement.classList.toggle('answer--open')
             const $questionElement = $elem.querySelector('.question')
