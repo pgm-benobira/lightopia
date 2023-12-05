@@ -832,7 +832,7 @@ video {
 }
 
 .answer {
-    transition: 0.3s;
+    transition: 0.4s;
     margin-bottom: 0;
     max-height: 0;
     position: relative;
@@ -845,11 +845,15 @@ video {
     margin-bottom: 1.2rem;
 }
 
+.answer p:last-child {
+    margin-bottom: 0.4rem;
+}
+
 .answer--open {
-    transition: 0.6s;
+    transition: 1s;
     margin-top: 1.2rem;
     margin-bottom: 0.3rem;
-    max-height: 100rem;
+    max-height: 50rem;
     top: 0rem;
     opacity: 100;
 }
