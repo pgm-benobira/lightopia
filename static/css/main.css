@@ -731,6 +731,8 @@ video {
 
 .button-container {
     padding-bottom: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .remove {
@@ -761,7 +763,6 @@ video {
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: -1;
 }
 
 .photo-container img {
@@ -866,6 +867,10 @@ video {
     position: relative;
 }
 
+.map-wrapper {
+    position: relative;
+}
+
 /* Markers/pointers */
 
 .interactive-map__markers {
@@ -873,10 +878,13 @@ video {
 }
 
 .marker {
+    border: none;
     position: absolute;
     top: 0;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 6vw;
+    height: 6vw;
+    max-width: 3.2rem;
+    max-height: 3.2rem;
     border-radius: 50%;
     background-color: var(--green);
     display: flex;
@@ -884,6 +892,13 @@ video {
     justify-content: center;
     align-items: center;
     transform: translate(-50%, -50%);
+    transition: 0.2s ease;
+}
+
+.marker:hover {
+    cursor: pointer;
+    background-color: hsl(149, 78%, 35%);
+    transition: 0.2s ease;
 }
 
 .marker::before {
@@ -912,9 +927,49 @@ video {
 }
 
 /* Interactive-map focus */
-
 .interactive-map-focus {
-    display: none;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    width: 100%;
+    max-width: 62.5rem;
+    height: 100%;
+    max-height: 40.7rem;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.6s ease;
+}
+
+.interactive-map-focus--open {
+    visibility: visible;
+    opacity: 100%;
+    transition: 0.4s ease;
+}
+
+.remove--map {
+    width: 100%;
+    max-width: 3rem;
+    height: 100%;
+    max-height: 3rem;
+}
+
+.remove--map:hover {
+    background: none;
+    opacity: 60%;
+}
+
+.map-image-container {
+    width: 82%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
 
