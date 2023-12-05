@@ -859,6 +859,42 @@ video {
     opacity: 100;
 }
 
+/* -------------------------------------- Interactive-map ------------------------------- */
+.interactive-map {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.interactive-map__markers {
+    position: relative;
+}
+
+.marker {
+    position: absolute;
+    top: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.marker::before {
+    content: '';
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 75%;
+}
+
+.marker__svg {
+    max-width: 2rem;
+}
+
 
 /* ══════════════════════════════════════════════════════════════════════════════════════
 ════════════════════════════════════════ FOOTER ═════════════════════════════════════════
