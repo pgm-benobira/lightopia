@@ -4,7 +4,6 @@ const $buttonElement = document.querySelector('.open-menu')
 const $galleryElement = document.querySelectorAll('.photo')
 const $galleryFocusElement = document.querySelector('.gallery-focus');
 const $photoContainer = document.querySelector('.photo-container');
-const $mapElement = document.querySelector('.interactive-map');
 
 // ---------------- HEADER ------------------------------------------------------------------------------------------------------------------------------
 // Change the header when scrolling
@@ -44,17 +43,6 @@ function generateUIForPhoto() {
         })
     })
 }
-
-// ---------------- INTERACTIVE MAP ------------------------------------------------------------------------------------------------------------------
-function generateHTMLForMap () {
-    return `
-    <p>Hello</p>
-    `
-};
-
-function generateUIForMap () {
-    $mapElement.innerHTML = generateHTMLForMap();
-};
 
 // ---------------- GENERATE USER INTERFACE ----------------------------------------------------------------------------------------------------------
 // Show the user interface for 'Lightopia'
