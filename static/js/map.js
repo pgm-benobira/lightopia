@@ -1,3 +1,4 @@
+(() => {
 const $mapElement = document.querySelector('.interactive-map');
 const $mapFocusElement = document.querySelector('.interactive-map-focus');
 const $mapWrapperElement = document.querySelector('.map-wrapper')
@@ -14,6 +15,7 @@ function generateHTMLForMap (items) {
     `
 };
 
+// ---------------- GENERATE USER INTERFACE ----------------------------------------------------------------------------------------------------------
 function generateUIForMap () {
     $mapElement.innerHTML = generateHTMLForMap(markers);
     const $elems = $mapWrapperElement.querySelectorAll('.marker')
@@ -38,19 +40,20 @@ function generateHTMLForMapFocus (photo) {
         <img class="map-image" src="${photo.imageLink}" alt="${photo.name}">
     </div>
     `
-}
+};
 
 function generateUIForMapFocus (src) {
     const photo = markers.find((marker) => marker.imageLink === src);
     $mapFocusElement.classList.add('interactive-map-focus--open')
     $mapFocusElement.innerHTML = generateHTMLForMapFocus(photo);
-}
+};
 
 // ---------------- INITIALIZE APPLICATION ----------------------------------------------------------------------------------------------------------
 // Start the application 'Lightopia'
 function initialize () {
     generateUIForMap();
-}
+};
 
 // Call the function for the application
 initialize();
+})();

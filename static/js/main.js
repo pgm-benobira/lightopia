@@ -1,3 +1,4 @@
+(() => {
 const $headerElement = document.querySelector('.main-header');
 const $menuElement = document.querySelector('.menu-container');
 const $buttonElement = document.querySelector('.open-menu')
@@ -26,7 +27,7 @@ function generateUIForMenu () {
     });
 };
 
-// ---------------- GALLERY-FOCUS -----------------------------------------------------------------------------------------------------------------------------
+// ---------------- GALLERY-FOCUS -----------------------------------------------------------------------------------------------------------------------
 function generateUIForPhoto() {
     $galleryElement.forEach(photo => {
         photo.addEventListener('click', () => {
@@ -42,9 +43,9 @@ function generateUIForPhoto() {
             });
         })
     })
-}
+};
 
-// ---------------- GENERATE USER INTERFACE ----------------------------------------------------------------------------------------------------------
+// ---------------- GENERATE USER INTERFACE --------------------------------------------------------------------------------------------------------------
 // Show the user interface for 'Lightopia'
 function generateUI () {
     // Add scrolling event
@@ -55,11 +56,12 @@ function generateUI () {
     generateUIForPhoto()
 };
 
-// ---------------- INITIALIZE APPLICATION ----------------------------------------------------------------------------------------------------------
+// ---------------- INITIALIZE APPLICATION ----------------------------------------------------------------------------------------------------------------
 // Start the application 'Lightopia'
 function initialize () {
     generateUI();
-}
+};
 
 // Call the function for the application
 initialize();
+})();

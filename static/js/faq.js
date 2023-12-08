@@ -1,3 +1,4 @@
+(() => {
 const $faqElement = document.querySelector('.faq');
 
 // ---------------- FAQ -------------------------------------------------------------------------------------------------------------------------------
@@ -15,6 +16,7 @@ function generateHTMLForFaq (items, category) {
     `;
 };
 
+// ---------------- GENERATE USER INTERFACE --------------------------------------------------------------------------------------------------------------
 function generateUIForFaq () {
     let categories = ["algemeen", "parcours", "eten en drinken", "toegankelijkheid", "route & parking", "tickets", "contact"];
     // Tip: Eerst een loop maken die de categorieën haalt uit de array
@@ -55,7 +57,8 @@ function generateUIForFaq () {
 // Start the application
 function initialize () {
     generateUIForFaq();
-}
+};
 
 // Call the function for the application
 initialize();
+})();
