@@ -53,8 +53,6 @@ function generateUI () {
     generateUIForMenu();
     // Show gallery photo
     generateUIForPhoto()
-    // Show the map
-    generateUIForMap();
 };
 
 // ---------------- INITIALIZE APPLICATION ----------------------------------------------------------------------------------------------------------

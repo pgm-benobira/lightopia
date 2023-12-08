@@ -46,17 +46,10 @@ function generateUIForMapFocus (src) {
     $mapFocusElement.innerHTML = generateHTMLForMapFocus(photo);
 }
 
-// ---------------- GENERATE USER INTERFACE ----------------------------------------------------------------------------------------------------------
-// Show the user interface for 'Lightopia'
-function generateUI () {
-    // Show the map
-    generateUIForMap();
-};
-
 // ---------------- INITIALIZE APPLICATION ----------------------------------------------------------------------------------------------------------
 // Start the application 'Lightopia'
 function initialize () {
-    generateUI();
+    generateUIForMap();
 }
 
 // Call the function for the application

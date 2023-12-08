@@ -51,17 +51,10 @@ function generateUIForFaq () {
     });
 };
 
-// ---------------- GENERATE USER INTERFACE ----------------------------------------------------------------------------------------------------------
-// Show the user interface for the 'Lightopia'
-function generateUI () {
-    // Show the FAQ
-    generateUIForFaq();
-};
-
 // ---------------- INITIALIZE APPLICATION ----------------------------------------------------------------------------------------------------------
 // Start the application
 function initialize () {
-    generateUI();
+    generateUIForFaq();
 }
 
 // Call the function for the application
