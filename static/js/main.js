@@ -29,18 +29,41 @@ function generateUIForMenu () {
 
 // ---------------- GALLERY-FOCUS -----------------------------------------------------------------------------------------------------------------------
 function generateUIForPhoto() {
-    $galleryElement.forEach(photo => {
-        photo.addEventListener('click', () => {
-            // If the user clicks on a photo show the gallery-focus (photo in big)
-            const imageUrl = photo.getAttribute('src');
-            $photoContainer.querySelector('img').setAttribute('src', imageUrl);
+    // previous/next methods found on:
+    // - https://www.tutorjoes.in/JS_tutorial/image_gallery_in_javascript 
+    // - https://www.w3resource.com/javascript-exercises/event/javascript-event-handling-exercise-5.php
+    
+    let currentIndex = 0;
 
-            photo.classList.toggle('photo--open')
-            $galleryFocusElement.classList.toggle('gallery-focus--open')
+    function showPhoto(index) {
+        // Takes the image src from the image
+        const imageUrl = $galleryElement[index].getAttribute('src');
+        // Sets it to the img element inside the .photo-container
+        $photoContainer.querySelector('img').setAttribute('src', imageUrl);
+    };
+
+    $galleryElement.forEach((photo, index) => {
+        photo.addEventListener('click', () => { // if the user clicks on a photo:
+            currentIndex = index;
+            showPhoto(currentIndex); // add the correct source with the index in mind
+            $galleryFocusElement.classList.add('gallery-focus--open') // shows the photo in big
+
             // If the user clicks on the remove button -> class .gallery-focus--open is removed and closes the gallery-focus
             document.querySelector('.remove').addEventListener('click', () => {
                 $galleryFocusElement.classList.remove('gallery-focus--open')
             });
+
+            // Click on previous button goes to the index before the currentIndex
+            document.querySelector('.previous').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + $galleryElement.length) % $galleryElement.length;
+                showPhoto(currentIndex)
+            })
+
+            // Click on next button goes to the next index
+            document.querySelector('.next').addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % $galleryElement.length;
+                showPhoto(currentIndex)
+            })
         })
     })
 };

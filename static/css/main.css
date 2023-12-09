@@ -742,9 +742,36 @@ video {
 }
 
 .button-container {
-    padding-bottom: 1rem;
     position: relative;
     z-index: 1;
+}
+
+.image-nav-button {
+    position: absolute;
+    display: block;
+    border: none;
+    background-color: #333;
+    width: 2.8rem;
+    height: 2.8rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    bottom: -45vh;
+}
+
+.image-nav-button:hover {
+    background-color: #404040;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.previous {
+    left: 1rem;
+    transform: rotate(180deg);
+}
+
+.next {
+    right: 1rem;
 }
 
 .remove {
