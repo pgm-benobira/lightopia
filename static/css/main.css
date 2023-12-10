@@ -616,6 +616,8 @@ video {
 
 .trees {
     max-width: 18%;
+    max-height: 50rem;
+    z-index: -1;
     position: absolute;
     top: 4rem;
     animation-name: swing;
